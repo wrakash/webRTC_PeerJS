@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+</head>
+
+<body>
+
+   <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                remote
+              <video id="rVideo" outplay="autplay"></video>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                local
+              <video id="lVideo" outplay="autplay"></video>
+            </div>
+          </div>
+
+       <span id="displayId"></span>
+       <input id="connId" type="text" placeholder="enter a connection id" required/>
+       <button id="conn_btn" class="btn btn-lg btn-success btn-block" type="submit">Connect</button>
+       <button id="call_btn" class="btn btn-lg btn-danger btn-block" type="submit">call</button>
+   </div>
+
+
+    <!-- connects to the server and displays results -->
+    <h1 class="h3 mb-3 font-weight-normal" style="margin-left: 225px; margin-top: 40px; ">Chatting Window</h1>
+    <div class="container" id="chat">
+        <div id="chat-window">
+            <div id="output"></div>
+            <div id="typing"></div>
+        </div>
+
+        <div class="container">
+            <input id="handle" type="text" placeholder="name" class="form-control" required outofocus/>
+            <input id="message" type="text" placeholder="message" class="form-control" required />
+            <button id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.2.0/peerjs.min.js"></script>
+    <script src="/clientS.js"></script>
+
+
+</body>
+
+</html>
